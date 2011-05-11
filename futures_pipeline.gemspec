@@ -17,6 +17,13 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
+  s.add_development_dependency('faraday', '~> 0.6.1')
+  s.add_development_dependency('faraday_middleware', '~> 0.6.3')
+  s.add_development_dependency('hashie', '~> 1.0.0')
+  s.add_development_dependency('json', '~> 1.5.1')
+  s.add_development_dependency('multi_json', '~> 1.0.1')
+  s.add_development_dependency('rash', '~> 0.3.0')
+
   s.add_development_dependency('ZenTest', '~> 4.5')
   s.add_development_dependency('maruku', '~> 0.6')
   s.add_development_dependency('rake', '~> 0.8')
