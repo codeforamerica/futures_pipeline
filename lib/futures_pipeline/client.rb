@@ -18,7 +18,8 @@ module FuturesPipeline
       get("/api/v1/careers.json", options)
     end
     
-    def career(api_safe_onet_soc_code, options={})
+    def career(onet_soc_code, options={})
+      api_safe_onet_soc_code = onet_soc_code.tr(".", "-") 
       get("/api/v1/careers/#{api_safe_onet_soc_code}.json", options)
     end
     
