@@ -6,4 +6,8 @@ module FuturesPipeline
     FuturesPipeline::Client.new
   end
 
+  def self.new
+    client
+  end
+
 end
