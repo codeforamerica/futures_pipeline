@@ -5,5 +5,9 @@ module FuturesPipeline
   class Client
     include FuturesPipeline::Connection
     include FuturesPipeline::Request
+
+    def careers(options={})
+      get("/api/v1/careers.json", options)
+    end
   end
 end
