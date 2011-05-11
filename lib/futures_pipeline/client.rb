@@ -18,11 +18,12 @@ module FuturesPipeline
       get("/api/v1/careers.json", options)
     end
 
-    # Get a single career using O*NET code.
+    # Get a single career using O\*NET code.
     #
-    # @param onet_soc_code [String] The O*NET code
+    # @param onet_soc_code [String] The O\*NET code
     # @param options [Hash] A customizable set of options.
     # @return [Hashie::Mash]
+    # @raise [Faraday::Error::ResourceNotFound] If O\*NET code is not found.
     # @example
     #   @client = FuturesPipeline.new
     #   @client.career("11-1011.00")
