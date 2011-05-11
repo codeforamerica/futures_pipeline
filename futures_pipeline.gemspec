@@ -1,18 +1,16 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "gem_template/version"
+require "futures_pipeline/version"
 
 Gem::Specification.new do |s|
-  s.name        = "gem_template"
-  s.version     = GemTemplate::VERSION
+  s.name        = "futures_pipeline"
+  s.version     = FuturesPipeline::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.author      = "Code for America"
-  s.email       = "info@codeforamerica.org"
+  s.authors     = ["Erik Michaels-Ober", "Ryan Resella"]
+  s.email       = ["erik@codeforamerica.org", "ryan@codeforamerica.org"]
   s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
-
-  s.rubyforge_project = "gem_template"
+  s.summary     = "Ruby wrapper for the Futures, Inc. US Military Pipeline API"
+  s.description = s.summary
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
