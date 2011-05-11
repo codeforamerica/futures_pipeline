@@ -20,7 +20,6 @@ Usage Examples
 
     @client = FuturesPipeline.new
     @client.careers # Return an array of 50 careers
-    @client.careers.first # Return an array of 50 careers
     @client.careers.first.title # => "Chief Executives"
     @client.careers.first.onet_soc_code # => "11-1011.00"
     @client.career("11-1011.00") # Return detailed information about Chief Executives
