@@ -12,10 +12,18 @@ describe FuturesPipeline::Client do
     end
   end
   
-  describe "#career" do
-    it "should fetch one career" do
-      career = @client.career("11-1011-00")
-      career.title.should == "Chief Executives"
+  describe "#career" do 
+    context "with API-safe O*NET code" do
+      it "should fetch one career" do
+        career = @client.career("11-1011-00")
+        career.title.should == "Chief Executives"
+      end
+    end
+    context "with O*NET status code" do
+      it "should fetch one career" do
+         career = @client.career("11-1011.00")
+          career.title.should == "Chief Executives"
+      end
     end
   end
   
