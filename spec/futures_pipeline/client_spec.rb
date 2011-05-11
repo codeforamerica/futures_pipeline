@@ -14,8 +14,8 @@ describe FuturesPipeline::Client do
   
   describe "#career" do
     it "should fetch one career" do
-      career = @client.career
-      carrer.title.should == "Chief Executives"
+      career = @client.career("11-1011-00")
+      career.title.should == "Chief Executives"
     end
   end
   
