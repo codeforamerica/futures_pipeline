@@ -18,6 +18,14 @@ module FuturesPipeline
       get("/api/v1/careers.json", options)
     end
     
+    # Get a single career using O*NET code. 
+    #
+    # @param onet_soc_code [String] The O*NET code 
+    # @param options [Hash] A customizable set of options.
+    # @return [Hashie::Mash]
+    # @example
+    #   @client = FuturesPipeline.new
+    #   @client.career("11-1011.00")
     def career(onet_soc_code, options={})
       api_safe_onet_soc_code = onet_soc_code.tr(".", "-") 
       get("/api/v1/careers/#{api_safe_onet_soc_code}.json", options)
