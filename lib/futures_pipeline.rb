@@ -2,8 +2,8 @@ require 'futures_pipeline/client'
 
 module FuturesPipeline
 
-  def self.client(options={})
-    FuturesPipeline::Client.new(options={})
+  def self.client
+    FuturesPipeline::Client.new
   end
 
 end
