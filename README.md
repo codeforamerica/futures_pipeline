@@ -64,6 +64,10 @@ Submitting a Pull Request
 8. Commit and push your changes.
 9. Submit a pull request. Please do not include changes to the gemspec, version, or history file. (If you want to create your own version for some reason, please do so in a separate commit.)
 
+Credits
+-------
+Futures, Inc. REST API developed by [Tom Harris](https://github.com/tomharris).
+
 Copyright
 ---------
 Copyright (c) 2011 Code for America.
