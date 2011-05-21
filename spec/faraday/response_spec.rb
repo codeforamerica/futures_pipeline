@@ -18,6 +18,11 @@ describe Faraday::Response do
   }.each do |status, exception|
     context "when HTTP status is #{status}" do
 
+      before do
+        stub_get("api/v1/careers/11-1011-01.json").
+          to_return(:status => status, :body => fixture("career.json"))
+      end
+
       it "should raise #{exception.name} error" do
         lambda do
           @client.career("11-1011.01")
