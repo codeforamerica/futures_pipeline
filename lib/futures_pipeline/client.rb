@@ -32,10 +32,26 @@ module FuturesPipeline
       get("/api/v1/careers/#{api_safe_onet_soc_code}.json", options)
     end
     
+    # Get a list of searchable careers
+    #
+    # @param options [Hash] A customizable set of options.
+    # @return [Hashie::Mash]
+    # @example
+    #   @client = FuturesPipeline.new
+    #   @client.search
     def search(options={})
        get("/api/v1/careers/search.json", options)
     end
     
+    # Search for careers by MOC code.  Returns a list of careers related to the MOC.
+    #
+    # @param moc [String] The MOC
+    # @param options [Hash] A customizable set of options.
+    # @return [Hashie::Mash]
+    # @raise [Faraday::Error::ResourceNotFound] If MOC is not found.
+    # @example
+    #   @client = FuturesPipeline.new
+    #   @client.search_by_moc("11b")
     def search_by_moc(moc, options={})
        get("/api/v1/careers/search.json?moc=#{moc}", options)
     end
