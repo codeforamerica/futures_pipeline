@@ -44,16 +44,29 @@ describe FuturesPipeline::Client do
   end
   
   describe "#search" do
-    before do
-      stub_get("api/v1/search.json").
-        to_return(:status => 200, :body => fixture("search.json"))
+    context "with no paramaters" do
+      before do
+        stub_get("api/v1/search.json").
+          to_return(:status => 200, :body => fixture("search.json"))
+      end
+    
+      it "should return a search of careers" do
+        search = @client.search
+        search.first.title.should == "Chief Executives"
+      end  
     end
     
-    it "should return a search of careers" do
-      search = @client.search
-      search.first.title.should == "Chief Executives"
-    end  
+    context "with MOC parameter" do
+      before do
+        stub_get("api/v1/careers/search.json?moc=11b").
+          to_return(:status => 200, :body => fixture("search.json"))
+      end
+      
+      it "should return one career related to the MOC" do
+        search = @client.search("11b")
+        search.first.title.should == "Training and Development Specialists"
+      end
+    end
   end
   
-
 end
