@@ -31,5 +31,14 @@ module FuturesPipeline
       api_safe_onet_soc_code = onet_soc_code.tr(".", "-")
       get("/api/v1/careers/#{api_safe_onet_soc_code}.json", options)
     end
+    
+    def search(options={})
+       get("/api/v1/careers/search.json", options)
+    end
+    
+    def search_by_moc(moc, options={})
+       get("/api/v1/careers/search.json?moc=#{moc}", options)
+    end
+    
   end
 end
