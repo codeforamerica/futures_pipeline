@@ -9,7 +9,8 @@ module FuturesPipeline
     # Get a list of all the available careers. Returns an array of 50 careers per request. Use offset option to get more.
     #
     # @param options [Hash] A customizable set of options.
-    # @option options offset [Integer] The offset from the first career in the list.
+    # @option options rpp [Integer] The results per page from the first career in the list.
+    # @option options page [Integer] the page of results from the first career in the list.
     # @return [Array<Hashie::Mash>]
     # @example
     #   @client = FuturesPipeline.new
