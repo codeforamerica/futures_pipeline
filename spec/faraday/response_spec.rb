@@ -26,7 +26,7 @@ describe Faraday::Response do
       it "should raise #{exception.name} error" do
         lambda do
           @client.career("11-1011.01")
-        end.should raise_error(exception)
+        end.should raise_error exception
       end
     end
   end

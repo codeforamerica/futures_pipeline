@@ -42,32 +42,32 @@ describe FuturesPipeline::Client do
       end
     end
   end
-  
+
   describe "#search" do
     context "with no paramaters" do
       before do
         stub_get("api/v1/careers/search.json").
           to_return(:status => 200, :body => fixture("search.json"))
-          
       end
-    
+
       it "should return a search of careers" do
-        search = @client.search
-        search.first.title.should == "Chief Executives"
-      end  
+        lambda do
+          @client.search
+        end.should raise_error ArgumentError
+      end
     end
-    
+
     context "with MOC parameter" do
       before do
         stub_get("api/v1/careers/search.json?moc=11b").
-          to_return(:status => 200, :body => fixture("search_by_moc.json"))
+          to_return(:status => 200, :body => fixture("search.json"))
       end
-      
+
       it "should return one career related to the MOC" do
-        search = @client.search_by_moc("11b")
+        search = @client.search("11b")
         search.first.title.should == "Training and Development Specialists"
       end
     end
   end
-  
+
 end
