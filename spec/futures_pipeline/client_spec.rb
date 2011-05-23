@@ -46,11 +46,8 @@ describe FuturesPipeline::Client do
   describe "#search" do
     context "with no paramaters" do
       before do
-        stub_get("api/v1/search.json").
+        stub_get("api/v1/careers/search.json").
           to_return(:status => 200, :body => fixture("search.json"))
-        stub_request(:get, "http://militarydemo.pipelinenc.com/api/v1/careers/search.json").
-          with(:headers => {'Accept'=>'*/*', 'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3', 'User-Agent'=>'Ruby'}).
-          to_return(:status => 200, :body => "", :headers => {})
           
       end
     
