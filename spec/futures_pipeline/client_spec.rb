@@ -63,7 +63,7 @@ describe FuturesPipeline::Client do
       end
       
       it "should return one career related to the MOC" do
-        search = @client.search("11b")
+        search = @client.search_by_moc("11b")
         search.first.title.should == "Training and Development Specialists"
       end
     end
