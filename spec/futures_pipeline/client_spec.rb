@@ -59,7 +59,7 @@ describe FuturesPipeline::Client do
     context "with MOC parameter" do
       before do
         stub_get("api/v1/careers/search.json?moc=11b").
-          to_return(:status => 200, :body => fixture("search.json"))
+          to_return(:status => 200, :body => fixture("search_by_moc.json"))
       end
       
       it "should return one career related to the MOC" do
