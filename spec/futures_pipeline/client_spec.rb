@@ -42,5 +42,18 @@ describe FuturesPipeline::Client do
       end
     end
   end
+  
+  describe "#search" do
+    before do
+      stub_get("api/v1/search.json").
+        to_return(:status => 200, :body => fixture("search.json"))
+    end
+    
+    it "should return a search of careers" do
+      search = @client.search
+      search.first.title.should == "Chief Executives"
+    end  
+  end
+  
 
 end
