@@ -72,3 +72,5 @@ Copyright
 ---------
 Copyright (c) 2011 Code for America.
 See [LICENSE](https://github.com/codeforamerica/futures_pipeline/blob/master/LICENSE.md) for details.
+
+[![Code for America Tracker](http://stats.codeforamerica.org/codeforamerica/futures_pipeline.png)](http://stats.codeforamerica.org/projects/futures_pipeline)
