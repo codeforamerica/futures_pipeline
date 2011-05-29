@@ -13,6 +13,7 @@ describe FuturesPipeline::Client do
 
     it "should fetch all careers" do
       careers = @client.careers
+      a_get("api/v1/careers.json").should have_been_made
       careers.first.title.should == "Chief Executives"
     end
   end
@@ -26,6 +27,7 @@ describe FuturesPipeline::Client do
 
       it "should fetch one career" do
         career = @client.career("11-1011-00")
+        a_get("api/v1/careers/11-1011-00.json").should have_been_made
         career.title.should == "Chief Executives"
       end
     end
@@ -38,6 +40,7 @@ describe FuturesPipeline::Client do
 
       it "should fetch one career" do
         career = @client.career("11-1011.00")
+        a_get("api/v1/careers/11-1011-00.json").should have_been_made
         career.title.should == "Chief Executives"
       end
     end
@@ -65,6 +68,7 @@ describe FuturesPipeline::Client do
 
       it "should return one career related to the MOC" do
         search = @client.search("11b")
+        a_get("api/v1/careers/search.json?moc=11b").should have_been_made
         search.first.title.should == "Training and Development Specialists"
       end
     end
