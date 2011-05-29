@@ -4,8 +4,8 @@ module FuturesPipeline
   # Alias for FuturesPipeline::Client.new
   #
   # @return [FuturesPipeline::Client]
-  def self.new(options={})
-    FuturesPipeline::Client.new(options)
+  def self.new
+    FuturesPipeline::Client.new
   end
 
   # Delegate to FuturesPipeline::Client
