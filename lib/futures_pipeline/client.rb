@@ -13,8 +13,7 @@ module FuturesPipeline
     # @option options page [Integer] the page of results from the first career in the list.
     # @return [Array<Hashie::Mash>]
     # @example
-    #   @client = FuturesPipeline.new
-    #   @client.careers
+    #   FuturesPipeline.careers
     def careers(options={})
       get("/api/v1/careers.json", options)
     end
@@ -26,8 +25,7 @@ module FuturesPipeline
     # @return [Hashie::Mash]
     # @raise [Faraday::Error::ResourceNotFound] If O\*NET code is not found.
     # @example
-    #   @client = FuturesPipeline.new
-    #   @client.career("11-1011.00")
+    #   FuturesPipeline.career("11-1011.00")
     def career(onet_soc_code, options={})
       api_safe_onet_soc_code = onet_soc_code.tr(".", "-")
       get("/api/v1/careers/#{api_safe_onet_soc_code}.json", options)
@@ -39,11 +37,9 @@ module FuturesPipeline
     # @param options [Hash] A customizable set of options.
     # @return [Hashie::Mash]
     # @example
-    #   @client = FuturesPipeline.new
-    #   @client.search("11b")
+    #   FuturesPipeline.search("11b")
     def search(moc, options={})
        get("/api/v1/careers/search.json?moc=#{moc}", options)
     end
-
   end
 end
