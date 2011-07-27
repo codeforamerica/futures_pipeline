@@ -12,7 +12,7 @@ Documentation
 
 Continuous Integration
 ----------------------
-[![Build Status](http://travis-ci.org/codeforamerica/futures_pipeline.png)](http://travis-ci.org/codeforamerica/futures_pipeline)
+[![Build Status](https://secure.travis-ci.org/codeforamerica/futures_pipeline.png)](http://travis-ci.org/codeforamerica/futures_pipeline)
 
 Usage Examples
 --------------
