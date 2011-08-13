@@ -2,19 +2,19 @@
 
 Ruby wrapper for the Futures, Inc. US Military Pipeline API
 
-Installation
+<a name="installation">Installation</a>
 ------------
     gem install futures_pipeline
 
-Documentation
+<a name="documentation">Documentation</a>
 -------------
 [http://rdoc.info/gems/futures_pipeline](http://rdoc.info/gems/futures_pipeline)
 
-Continuous Integration
+<a name="ci">Continuous Integration</a>
 ----------------------
 [![Build Status](https://secure.travis-ci.org/codeforamerica/futures_pipeline.png)](http://travis-ci.org/codeforamerica/futures_pipeline)
 
-Usage Examples
+<a name="examples">Usage Examples</a>
 --------------
     require 'futures_pipeline'
 
@@ -24,7 +24,7 @@ Usage Examples
     @client.careers.first.onet_soc_code # => "11-1011.00"
     @client.career("11-1011.00") # Return detailed information about Chief Executives
 
-Contributing
+<a name="contributing">Contributing</a>
 ------------
 In the spirit of [free software](http://www.fsf.org/licensing/essays/free-sw.html), **everyone** is encouraged to help improve this project.
 
@@ -41,7 +41,7 @@ Here are some ways *you* can contribute:
 * by reviewing patches
 * [financially](https://secure.codeforamerica.org/page/contribute)
 
-Submitting an Issue
+<a name="issues">Submitting an Issue</a>
 -------------------
 We use the [GitHub issue tracker](https://github.com/codeforamerica/futures_pipeline/issues)
 to track bugs and features. Before submitting a bug report or feature request,
@@ -52,7 +52,7 @@ details that may be necessary to reproduce the bug, including your gem version,
 Ruby version, and operating system. Ideally, a bug report should include a pull
 request with failing specs.
 
-Submitting a Pull Request
+<a name="pulls">Submitting a Pull Request</a>
 -------------------------
 1. Fork the project.
 2. Create a topic branch.
@@ -64,7 +64,7 @@ Submitting a Pull Request
 8. Commit and push your changes.
 9. Submit a pull request. Please do not include changes to the gemspec, version, or history file. (If you want to create your own version for some reason, please do so in a separate commit.)
 
-Supported Rubies
+<a name="rubies">Supported Rubies</a>
 ----------------
 This library aims to support and is [tested
 against](http://travis-ci.org/codeforamerica/futures_pipeline) the following
@@ -95,7 +95,7 @@ Credits
 -------
 Futures, Inc. REST API developed by [Tom Harris](https://github.com/tomharris).
 
-Copyright
+<a name="copyright">Copyright</a>
 ---------
 Copyright (c) 2011 Code for America.
 See [LICENSE](https://github.com/codeforamerica/futures_pipeline/blob/master/LICENSE.md) for details.
