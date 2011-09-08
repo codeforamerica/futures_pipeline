@@ -8,7 +8,7 @@ Ruby wrapper for the Futures, Inc. US Military Pipeline API
 [http://rdoc.info/gems/futures_pipeline](http://rdoc.info/gems/futures_pipeline)
 
 ## <a name="ci">Continuous Integration</a>
-[![Build Status](https://travis-ci.org/codeforamerica/futures_pipeline.png)](http://travis-ci.org/codeforamerica/futures_pipeline)
+[![Build Status](https://secure.travis-ci.org/codeforamerica/futures_pipeline.png)](http://travis-ci.org/codeforamerica/futures_pipeline)
 
 ## <a name="examples">Usage Examples</a>
     require 'futures_pipeline'
