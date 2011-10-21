@@ -74,4 +74,30 @@ describe FuturesPipeline::Client do
     end
   end
 
+  describe "#assessment" do
+    before do
+      stub_get("api/v1/assessment.json").
+        to_return(:status => 200, :body => fixture("assessment.json"))
+    end
+
+    it "should fetch all assessment questions" do
+      assessment = @client.assessment
+      a_get("api/v1/assessment.json").should have_been_made
+      assessment.first.id.should == "interest_question_1"
+    end
+  end
+
+  describe "#assessment_result" do
+    before do
+      stub_get("api/v1/careers/123451/12345123.json").
+        to_return(:status => 200, :body => fixture("assessment_result.json"))
+    end
+
+    it "should fetch an assessment result" do
+      assessment_result = @client.assessment_result(1, 2, 3, 4, 5, 1, 1, 2, 3, 4, 5, 1, 2, 3)
+      a_get("api/v1/careers/123451/12345123.json").should have_been_made
+      assessment_result.first.onet_soc_code.should == "27-3011.00"
+    end
+  end
+
 end
